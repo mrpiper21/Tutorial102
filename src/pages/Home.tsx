@@ -1,5 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   AntDesign,
   EvilIcons,
@@ -12,6 +13,7 @@ import {
 } from "react-native-responsive-screen";
 
 const Home = () => {
+  const navigation = useNavigation() as any;
   return (
     <View className="flex-1 pt-16 pl-4 pr-4">
       {/**Location header */}
@@ -31,9 +33,10 @@ const Home = () => {
       <View className="mb-3 mt-5">
         <Text className="text-lg">Popular in Barceona</Text>
       </View>
-      <View
+      <TouchableOpacity
         className="flex flex-col bg-slate-200"
         style={{ borderRadius: hp(1) }}
+        onPress={() => navigation.navigate("Buy")}
       >
         <Image
           source={{
@@ -69,7 +72,7 @@ const Home = () => {
             style={{ marginRight: hp(1.5) }}
           />
         </View>
-      </View>
+      </TouchableOpacity>
 
       {/**Sub image div */}
       <View className="flex flex-col space-y-2">
@@ -92,10 +95,10 @@ const Home = () => {
               <Text>Raaamatazzz</Text>
             </View>
           </View>
-          <View className="flex flex-row">
-            <EvilIcons name="share-google" size={24} color="black" />
-            <AntDesign
-              name="hearto"
+          <View className="flex flex-row right-2">
+            <AntDesign name="hearto" size={24} color="black" />
+            <EvilIcons
+              name="share-google"
               size={24}
               color="black"
               style={{ marginLeft: hp(2) }}
@@ -121,10 +124,10 @@ const Home = () => {
               <Text>Los Angeles</Text>
             </View>
           </View>
-          <View className="flex flex-row">
-            <EvilIcons name="share-google" size={24} color="black" />
-            <AntDesign
-              name="hearto"
+          <View className="flex flex-row right-2">
+            <AntDesign name="hearto" size={24} color="black" />
+            <EvilIcons
+              name="share-google"
               size={24}
               color="black"
               style={{ marginLeft: hp(2) }}
@@ -150,10 +153,10 @@ const Home = () => {
               <Text>Las Vegas</Text>
             </View>
           </View>
-          <View className="flex flex-row">
-            <EvilIcons name="share-google" size={24} color="black" />
-            <AntDesign
-              name="hearto"
+          <View className="flex flex-row right-2">
+            <AntDesign name="hearto" size={24} color="black" />
+            <EvilIcons
+              name="share-google"
               size={24}
               color="black"
               style={{ marginLeft: hp(2) }}

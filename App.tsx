@@ -8,6 +8,7 @@ import Welcome1 from "./src/pages/Welcome1";
 import Welcome2 from "./src/pages/Welcome2";
 import Welcome3 from "./src/pages/Welcome3";
 import Home from "./src/pages/Home";
+import Purchase from "./src/pages/Purchase";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Stack.Screen name="Page-three" component={Welcome2} />
         <Stack.Screen name="Page-four" component={Welcome3} />
         <Stack.Screen name="HomePage" component={Home} />
+        <Stack.Screen name="Buy" component={Purchase} />
       </Stack.Navigator>
     </NavigationContainer>
   );
