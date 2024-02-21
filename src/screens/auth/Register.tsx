@@ -6,7 +6,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-const Welcome2 = () => {
+const Register = () => {
   return (
     <View className="flex-1 p-10">
       <View className="pt-20">
@@ -52,13 +52,13 @@ const Welcome2 = () => {
           </View>
         </View>
       </View>
-      
+
       {/**Sign up btn */}
       <TouchableOpacity
         style={{
           width: hp(42),
           height: hp(7),
-          backgroundColor: 'rgb(82, 211, 216)',
+          backgroundColor: "rgb(82, 211, 216)",
           marginTop: 100,
           alignItems: "center",
           justifyContent: "center",
@@ -71,4 +71,4 @@ const Welcome2 = () => {
   );
 };
 
-export default Welcome2;
+export default Register;

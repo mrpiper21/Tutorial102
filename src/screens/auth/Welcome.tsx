@@ -7,7 +7,7 @@ import {
 } from "react-native-responsive-screen";
 import { useNavigation } from "@react-navigation/native";
 
-const Welcome1 = () => {
+const Welcome = () => {
   const navigation = useNavigation() as any;
 
   return (
@@ -35,7 +35,7 @@ const Welcome1 = () => {
       {/**Buttons */}
       <View className="flex flex-col justify-center items-center">
         <TouchableOpacity
-          onPress={() => navigation.navigate("Page-four")}
+          onPress={() => navigation.navigate("Login")}
           style={{
             backgroundColor: "aqua",
             justifyContent: "center",
@@ -48,7 +48,7 @@ const Welcome1 = () => {
           <Text>Sign In</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Page-three")}
+          onPress={() => navigation.navigate("Register")}
           className="bg-white mt-6 items-center border border-current justify-center rounded-md"
           style={{
             width: hp(43),
@@ -62,4 +62,4 @@ const Welcome1 = () => {
   );
 };
 
-export default Welcome1;
+export default Welcome;

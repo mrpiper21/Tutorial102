@@ -7,7 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-const Welcome3 = () => {
+const Login = () => {
   const navigation = useNavigation() as any;
 
   return (
@@ -22,12 +22,15 @@ const Welcome3 = () => {
       <View className="mt-20 flex flex-col space-y-3">
         <View className="flex flex-col space-y-1">
           <Text className="font-bold text-lg">Email address</Text>
-          <TextInput style={{ height: hp(5) }} placeholder="name@example.com" />
+          <TextInput
+            style={{ height: hp(7), backgroundColor: "rgb(227, 225, 217)" }}
+            placeholder="name@example.com"
+          />
         </View>
         <View className="flex flex-col space-y-1">
           <Text className="font-bold text-lg">Password</Text>
           <TextInput
-            style={{ height: hp(5) }}
+            style={{ height: hp(7), backgroundColor: "rgb(227, 225, 217)" }}
             placeholder="Enter your password"
           />
         </View>
@@ -38,10 +41,10 @@ const Welcome3 = () => {
       </View>
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("HomePage")}
+        onPress={() => navigation.navigate("Home")}
         style={{
           backgroundColor: "aqua",
-          top: hp(40),
+          top: hp(38),
           alignItems: "center",
           justifyContent: "center",
           width: hp(43),
@@ -56,4 +59,4 @@ const Welcome3 = () => {
   );
 };
 
-export default Welcome3;
+export default Login;

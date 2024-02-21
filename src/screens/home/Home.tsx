@@ -5,6 +5,7 @@ import {
   AntDesign,
   EvilIcons,
   MaterialCommunityIcons,
+  Feather,
 } from "@expo/vector-icons";
 
 import {
@@ -36,7 +37,7 @@ const Home = () => {
       <TouchableOpacity
         className="flex flex-col bg-slate-200"
         style={{ borderRadius: hp(1) }}
-        onPress={() => navigation.navigate("Buy")}
+        onPress={() => navigation.navigate("Purchase")}
       >
         <Image
           source={{
@@ -162,6 +163,26 @@ const Home = () => {
               style={{ marginLeft: hp(2) }}
             />
           </View>
+        </View>
+      </View>
+      {/**Tabs */}
+      <View className="flex flex-row justify-between items-center p-3">
+        <View>
+          <AntDesign name="home" size={24} color="black" />
+        </View>
+        <View>
+          <EvilIcons name="search" size={24} color="black" />
+        </View>
+        <View>
+          <AntDesign name="hearto" size={24} color="black" />
+        </View>
+        <View>
+          <Feather
+            name="user"
+            size={24}
+            color="black"
+            onPress={() => navigation.navigate("ProfileNavigation")}
+          />
         </View>
       </View>
     </View>

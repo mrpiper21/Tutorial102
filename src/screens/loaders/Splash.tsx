@@ -6,7 +6,7 @@ export default function Welcome() {
   const navigation = useNavigation() as any;
 
   const han = () => {
-    navigation.navigate("Page-two");
+    navigation.navigate("Welcome");
   };
   return (
     <SafeAreaView
@@ -19,7 +19,7 @@ export default function Welcome() {
     >
       {/**Text veiw */}
       <View>
-        <Text style={{ fontSize: 50, color: "white"}} onPress={han}>
+        <Text style={{ fontSize: 50, color: "white" }} onPress={han}>
           Flut
         </Text>
         <StatusBar style="auto" />
